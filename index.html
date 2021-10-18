@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>todo list</title>
+<!-- font-family: 'Noto Sans KR', sans-serif; -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<!-- 작성한 CSS -->
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+</head>
+<body>
+  <div id="app">
+    <todo-header></todo-header>
+    <todo-input @send-todo="updataTodo" :todo="todo"></todo-input>
+    <todo-list @check-todo="checkTodo" @delete-todo="deleteTodo" :todo-list="todoList"></todo-list>
+    <todo-footer @clear-todo="clearTodo" :todo-list="todoList"></todo-footer>
+  </div>
+
+<!-- fontawesome cdn -->
+<script src="https://kit.fontawesome.com/54d7fa0cfc.js" crossorigin="anonymous"></script>
+<!-- 작성한 JS -->
+<script src="main.js"></script>
+</body>
+</html>
